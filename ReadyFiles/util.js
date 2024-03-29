@@ -10,6 +10,14 @@ export function clearUserData(){
     localStorage.removeItem('user');
 }
 
+export function getUserId(){
+    return getUserData()?._id;
+}
+
+export function getUserToken(){
+    return getUserData()?.accessToken;
+}
+
 export function createSubmitHandler(callback){
     return function (event){
         event.preventDefault();
